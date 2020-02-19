@@ -2,18 +2,13 @@
 sudo pacman -S --noconfirm
 sudo pacman -Syuu --noconfirm
 sudo pacman -S --noconfirm --needed lightdm
-sudo pacman -S --noconfirm --needed arcolinux-lightdm-gtk-greeter arcolinux-lightdm-gtk-greeter-settings
+sudo pacman -S --noconfirm --needed lightdm-gtk-greeter lightdm-gtk-greeter-settings
 sudo pacman -S gnome --noconfirm --needed
 sudo systemctl enable lightdm.service -f
 sudo systemctl set-default graphical.target
 
 # Install Software from the Arch Repositories.
 sudo pacman -S cronie --noconfirm --needed
-sudo pacman -S galculator --noconfirm --needed
-sudo pacman -S qbittorrent --noconfirm --needed
-sudo pacman -S lollypop vlc --noconfirm --needed
-sudo pacman -S evince evolution --noconfirm --needed
-sudo pacman -S arc-gtk-theme --noconfirm --needed
 sudo pacman -S galculator --noconfirm --needed
 sudo pacman -S qbittorrent --noconfirm --needed
 sudo pacman -S lollypop vlc --noconfirm --needed
@@ -28,6 +23,7 @@ sudo pacman -S gnome-tweaks --noconfirm --needed
 sudo pacman -S python2 --noconfirm --needed
 sudo pacman -S vim --noconfirm --needed
 sudo pacman -S deja-dup --noconfirm --needed
+sudo pacman -S libreoffice-fresh --noconfirm needed
 
 # Install Software from the AUR
 yay -S brave-bin --noconfirm --needed
@@ -44,5 +40,4 @@ touch ~/Templates/Text
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
 ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
-
 
