@@ -23,7 +23,9 @@ sudo pacman -S gnome-tweaks --noconfirm --needed
 sudo pacman -S python2 --noconfirm --needed
 sudo pacman -S vim --noconfirm --needed
 sudo pacman -S deja-dup --noconfirm --needed
-sudo pacman -S libreoffice-fresh --noconfirm needed
+sudo pacman -S libreoffice-fresh --noconfirm --needed
+sudo pacman -S krita blender gimp --noconfirm --needed
+sudo pacman -S gnome-shell-extension-clipboard-indicator-git --noconfirm --needed
 
 # Install Software from the AUR
 yay -S brave-bin --noconfirm --needed
@@ -33,8 +35,20 @@ yay -S folder-color-nautilus-bzr --noconfirm --needed
 yay -S pamac --noconfirm --needed
 yay -S timeshift --noconfirm --needed
 yay -S visual-studio-code-bin --noconfirm --needed
+yay -S gnome-shell-extension-arch-update-git --noconfirm --needed
+yay -S gnome-shell-extension-arc-menu-git --noconfirm --needed
+yay -S gnome-shell-extension-dash-to-panel --noconfirm --needed
+yay -S gnome-shell-extension-caffeine-plus-git --noconfirm --needed
 
 touch ~/Templates/Text
+
+#-------------------------------------------------------------------------------
+# Setup User defaults
+#-------------------------------------------------------------------------------
+cp ./config/user /etc/dconf/profile/
+mkdir /etc/dconf/db/local.d
+cp ./config/00-extensions /etc/dconf/db/local.d/
+dconf update
 
 # Setup the shell
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
