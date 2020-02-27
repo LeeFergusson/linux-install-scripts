@@ -1,5 +1,4 @@
 # Install Desktop Environment.
-sudo pacman -S --noconfirm
 sudo pacman -Syuu --noconfirm
 sudo pacman -S --noconfirm --needed lightdm
 sudo pacman -S --noconfirm --needed lightdm-gtk-greeter lightdm-gtk-greeter-settings
@@ -25,7 +24,7 @@ sudo pacman -S vim --noconfirm --needed
 sudo pacman -S deja-dup --noconfirm --needed
 sudo pacman -S libreoffice-fresh --noconfirm --needed
 sudo pacman -S krita blender gimp --noconfirm --needed
-sudo pacman -S gnome-shell-extension-clipboard-indicator-git --noconfirm --needed
+
 
 # Install Software from the AUR
 yay -S brave-bin --noconfirm --needed
@@ -39,7 +38,7 @@ yay -S gnome-shell-extension-arch-update-git --noconfirm --needed
 yay -S gnome-shell-extension-arc-menu-git --noconfirm --needed
 yay -S gnome-shell-extension-dash-to-panel --noconfirm --needed
 yay -S gnome-shell-extension-caffeine-plus-git --noconfirm --needed
-
+yay -S gnome-shell-extension-clipboard-indicator-git --noconfirm --needed
 touch ~/Templates/Text
 
 #-------------------------------------------------------------------------------
